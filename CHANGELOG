@@ -1,0 +1,30 @@
+Lithe Changelog
+
+
+1.0.0-alpha.3-4
+    lithe now defaults to urls without html extension, this can be set back
+    setting the config constant USE_HTML_EXTENSION
+
+    Ugly mimetype mapping is replaced by the mimetypes module, on 
+    init, the mime.types files is loaded
+
+    Refactored the use of lithe.config constants in server.py
+
+1.0.0-alpha.2
+    Fixed issue with file listing
+
+1.0.0-alpha.1
+    Restructured entire application so it is easy to check in and out from git
+    Added setup.py for easy installation of lithe
+    
+
+0.3.0
+    Added YAML support and resuable templates
+
+0.2.0
+    Added the changelog
+    Added a rudimentary build script to lithe.sh
+    Changed references to static to not be absolute
+
+0.1.0
+    Initial project readied for github

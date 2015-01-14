@@ -1,0 +1,70 @@
+{% extends 'includes/layout.html' %}
+
+{% block content %}
+    <h1>Welcome to lithe!</h1>
+
+    <p>
+        Awesome you did it! lithe is up and running and ready to work <strong>for</strong> you!
+    </p>
+
+    <p>
+        Make sure you read the <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a> docs. This will help you prototype faster.
+    </p>
+
+    <p>
+        Below are some examples to get you started. You can find all files in the <strong>web</strong> folder.
+    </p>
+
+
+    <h2>Examples</h2>
+
+    <h3>Refering to your static files is easy</h3>
+    <p>
+        <img src="static/sugo-jinja2.jpg" alt="http://commons.wikimedia.org/wiki/File:Sugo-jinja2.jpg"><br>
+        <em>* courtesy of <a href="http://commons.wikimedia.org/wiki/File:Sugo-jinja2.jpg">Wikimedia</a></em>
+    </p>
+
+    <div class="highlight">
+        <pre>{{ '<img src="static/sugo-jinja2.jpg" alt="http://commons.wikimedia.org/wiki/File:Sugo-jinja2.jpg">' | escape }}</pre>
+    </div>
+
+    <h3>You need more lipsum</h3>
+
+    {{ lipsum(1) }}
+
+    <div class="highlight">
+        <pre>
+            {% raw -%}
+                {{ lipsum(1) }}
+            {%- endraw %}
+        </pre>
+    </div>
+
+    <h3>Loops are totally awesome</h3>
+
+    <p>
+        {% for i in range(1, 5) %}
+        <strong>Why are you hitting your self ({{ i }}) ?</strong><br>
+        {% endfor %}
+    </p>
+
+    <div class="hightlight">
+        <pre>
+        {% raw %}{% for i in range(1, 5) %}{% endraw %}
+        
+        {{ '<strong>Why are you hitting your self ({{ i }}) ?</strong><br>' | escape }}
+        {% raw %}{% endfor %}{% endraw %}
+        </pre>
+    </div>  
+
+    <h3>And then?</h3>
+
+    <p>
+        ...and then you checkout the Jinja2 docs. Also check this source code how to
+        <ul>
+            <li>extend templates</li>
+            <li>use blocks</li>
+        </ul>
+    </p>
+
+{% endblock %}
